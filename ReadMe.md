@@ -43,8 +43,8 @@ It is quiet simple:
 
 Attention: ampy's `run` waits for the code to finish and THEN return its output. So if you're writing code which runs forever, this script will never return (or put something in stdio).
 
-## Autostart of project
-If you want your script to be started automatically on boot of the ESP. Upload a file called `main.py`. If this file exists, it will be executed after `boot.py` is called.
+## Autostart of project, uploading files
+If you want your script to be started automatically on boot of the ESP, you need to upload your files. The entry script must be called `main.py`. If this file exists, it will be executed after `boot.py` is called.
 E.g. in this project:
 
 ``ampy --port COM8 put test_main.py main.py``
@@ -54,6 +54,9 @@ Note: If you want to keep its original name, just leave out the last parameter.
 If you run ``ampy --port COM8 ls`` again you should see you `main.py`.
 
 Note: You can NOT directly run internal files with ampy's `run`!
+`run` only uploads given script. So if you have further scripts to import, you have to upload them with:
+
+``ampy --port COM8 put another_file.py``
 
 ## Pre-Compile
 ### Install mpy-cross
