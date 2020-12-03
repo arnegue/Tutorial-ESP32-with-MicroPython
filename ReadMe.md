@@ -1,5 +1,5 @@
 # Getting started
-## Installing MicroPython for Esp3ESP32 (firmware)
+## Installing MicroPython for ESP32 (firmware)
 Read this quiet easy and straightforward [instructions](https://docs.micropython.org/en/latest/esp32/tutorial/intro.html).
 Basically you need a Python-package "esptool" and a corresponding ESP32-MicroPython-Firmware to flash on.  
 
